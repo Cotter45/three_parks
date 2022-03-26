@@ -1,0 +1,226 @@
+/* :root {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  --serif: PT Serif, serif;
+  --mono: Source Code Pro, monospace;
+  --sans: Source Sans Pro, sans-serif;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  color-scheme: light dark;
+}
+
+html, body, #root {
+  overflow: hidden;
+}
+
+body {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+*,*::after, *::before {
+  box-sizing: inherit;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  :where(input) {
+    font-size: 1.6rem;
+  }
+}
+
+.nav_bar_container {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: seagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_bar {
+  width: 90%;
+  height: 90%;
+  max-width: 1500px;
+  display: flex;
+}
+
+.main_container {
+  max-height: 100vh;
+  height: 90vh;
+  width: 10000px;
+  position: absolute;
+  top: 10vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+} */
+@import url("https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 20px;
+}
+
+::selection {
+  background: #2ddab8;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0c0f13;
+  overflow: hidden;
+  font-family: "Sulphur Point", sans-serif;
+  color: #8b8b8b;
+  font-size: 0.9rem;
+}
+
+.nav_bar_container {
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nav_bar {
+  width: 95%;
+  height: 90%;
+  max-width: 1500px;
+  display: flex;
+}
+
+.map-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  opacity: .2;
+}
+
+a {
+  color: #545454;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #8b8b8b;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading {
+  padding: 10px;
+  transform: translate3d(-50%, -50%, 0);
+  color: #8b8b8b;
+}
+
+.scrollArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.frame {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.frame__title {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+}
+
+.frame__links {
+  margin: 1rem 0;
+}
+
+.frame__link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.frame__nav .frame__link:first-child {
+  margin-right: 1.5rem;
+}
+
+.bottom-left {
+  padding: 1.5rem;
+  transform: translate3d(0, -100%, 0) !important;
+}
+
+.canvas > div {
+  z-index: 10000000;
+}
+
+#root > div > div {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 53em) {
+  body {
+    overflow: hidden;
+  }
+  .frame {
+    display: grid;
+    height: 100vh;
+    padding: 2rem 3.7rem;
+    pointer-events: none;
+    align-content: space-between;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title links"
+      "... ..."
+      "... nav";
+  }
+  .frame__title {
+    grid-area: title;
+  }
+  .frame__links {
+    grid-area: links;
+    justify-self: end;
+    margin: 0;
+  }
+  .frame__link {
+    pointer-events: auto;
+  }
+  .frame__nav {
+    grid-area: nav;
+    justify-self: end;
+  }
+  .bottom-left {
+    padding: 0 0 2rem 3.7rem;
+  }
+}
