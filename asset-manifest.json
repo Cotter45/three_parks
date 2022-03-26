@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/three_parks/static/css/main.831ca0d6.css",
+    "main.js": "/three_parks/static/js/main.6327fc32.js",
+    "static/js/787.44aa5e53.chunk.js": "/three_parks/static/js/787.44aa5e53.chunk.js",
+    "index.html": "/three_parks/index.html",
+    "main.831ca0d6.css.map": "/three_parks/static/css/main.831ca0d6.css.map",
+    "main.6327fc32.js.map": "/three_parks/static/js/main.6327fc32.js.map",
+    "787.44aa5e53.chunk.js.map": "/three_parks/static/js/787.44aa5e53.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.831ca0d6.css",
+    "static/js/main.6327fc32.js"
+  ]
+}
