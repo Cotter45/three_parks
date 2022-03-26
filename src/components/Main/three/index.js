@@ -3,7 +3,7 @@ import { Canvas, useLoader, useFrame } from "@react-three/fiber"
 import { Html } from "@react-three/drei"
 import { TextureLoader, LinearFilter } from "three"
 import lerp from "lerp"
-import { Text, MultilineText } from "./text"
+import { Text } from "./text"
 import Plane from "./plane"
 import { Block, useBlock } from "./blocks"
 import state from "./parks"
@@ -52,7 +52,7 @@ function Content() {
     state.paragraphs.map(({ image }) => image)
   )
   useMemo(() => images.forEach((texture) => (texture.minFilter = LinearFilter)), [images])
-  const { contentMaxWidth: w, canvasWidth, canvasHeight, mobile } = useBlock()
+  const { contentMaxWidth: w, mobile } = useBlock()
   return (
     <>
       <Block factor={1} offset={0}>

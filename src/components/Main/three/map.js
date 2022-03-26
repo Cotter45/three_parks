@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import state from './parks';
 
@@ -15,9 +15,9 @@ function Map({ current, scrollHeight }) {
 
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(initialLng);
-  const [lat, setLat] = useState(initialLat);
-  const [zoom, setZoom] = useState(8);
+  const [lng] = useState(initialLng);
+  const [lat] = useState(initialLat);
+  const [zoom] = useState(8);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
